@@ -7,14 +7,14 @@ Gem::Specification.new do |s|
   s.version     = Grid::Plugin::Updater::VERSION
   s.authors     = ["myobie"]
   s.email       = ["nathan@myobie.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/myobie/grid-plugin-updater"
   s.summary     = %q{Update grid every 5 minutes}
   s.description = %q{Keeping your grids updated}
 
   s.rubyforge_project = "grid-plugin-updater"
 
   s.post_install_message = "* To have grid update every 5 minutes, load this plist into launchd:
-  launchctl load -w #{File.expand_path(File.dirname(__FILE__))}/data/com.grid.updater.plist"
+  launchctl load -w #{s.full_gem_path}/data/com.grid.updater.plist"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
